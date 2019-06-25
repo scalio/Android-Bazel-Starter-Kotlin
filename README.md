@@ -7,3 +7,11 @@ This repository contains simple Kotlin 1.3 application and its Bazel build files
 * Run `bazel build //app/src/main:bazel` to build project
 
 Explore our Kotlin build rules and use the same in your projects.
+
+Currently this sample contains:
+* Kotlin 1.3 support
+* Annotation processing
+
+Current issues:
+* Databinidng is not supported
+* Windows building is not supported
