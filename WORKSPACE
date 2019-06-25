@@ -58,9 +58,10 @@ rules_kotlin_compiler_release = {
 
 http_archive(
     name = "io_bazel_rules_kotlin",
-    urls = ["https://github.com/mig35/rules_kotlin/archive/%s.zip" % rules_kotlin_version],
+    urls = ["https://github.com/scalio/rules_kotlin/archive/%s.zip" % rules_kotlin_version],
     type = "zip",
     strip_prefix = "rules_kotlin-%s" % rules_kotlin_version,
+    sha256 = "896dae8a727884cface6acb0d55fe71314ca39f9236789662fabf8cb3ba8283a",
 )
 
 load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kotlin_repositories", "kt_register_toolchains")
