@@ -36,7 +36,9 @@ maven_install(
         "androidx.drawerlayout:drawerlayout:1.0.0",
         "androidx.constraintlayout:constraintlayout:1.1.3",
         "com.google.android.material:material:1.0.0",
-        "org.jetbrains:annotations:17.0.0"
+        "org.jetbrains:annotations:17.0.0",
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0-M2",
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1"
     ],
     repositories = [
         "https://jcenter.bintray.com/",

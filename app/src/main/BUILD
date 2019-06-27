@@ -32,7 +32,8 @@ kt_android_library(
         artifact("androidx.lifecycle:lifecycle-viewmodel"),
         artifact("androidx.lifecycle:lifecycle-common"),
         artifact("androidx.drawerlayout:drawerlayout"),
-        artifact("org.jetbrains:annotations"),
+        artifact("org.jetbrains.kotlinx:kotlinx-coroutines-core"),
+        artifact("org.jetbrains.kotlinx:kotlinx-coroutines-android")
     ]
 )
 
