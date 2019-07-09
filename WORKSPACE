@@ -36,9 +36,12 @@ maven_install(
         "androidx.drawerlayout:drawerlayout:1.0.0",
         "androidx.constraintlayout:constraintlayout:1.1.3",
         "com.google.android.material:material:1.0.0",
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0-M2",
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1"
     ],
     repositories = [
         "https://maven.google.com",
+        "https://jcenter.bintray.com",
     ],
     fetch_sources = True,
 )
@@ -48,9 +51,9 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 rules_kotlin_version = "VERSION_0.1"
 rules_kotlin_compiler_release = {
     "urls": [
-        "https://github.com/JetBrains/kotlin/releases/download/v1.3.31/kotlin-compiler-1.3.31.zip",
+        "https://github.com/JetBrains/kotlin/releases/download/v1.3.41/kotlin-compiler-1.3.41.zip",
     ],
-    "sha256": "107325d56315af4f59ff28db6837d03c2660088e3efeb7d4e41f3e01bb848d6a",
+    "sha256": "c44ab6866895606e408b60934ebe45d4befcbc33ea0e4ea73c4b3b89ad770132",
 }
 
 http_archive(

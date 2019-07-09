@@ -32,6 +32,8 @@ kt_android_library(
         artifact("androidx.lifecycle:lifecycle-viewmodel"),
         artifact("androidx.lifecycle:lifecycle-common"),
         artifact("androidx.drawerlayout:drawerlayout"),
+        artifact("org.jetbrains.kotlinx:kotlinx-coroutines-core"),
+        artifact("org.jetbrains.kotlinx:kotlinx-coroutines-android"),
     ]
 )
 
@@ -43,7 +45,7 @@ android_binary(
         "minSdkVersion": "21",
         "versionCode" : "2",
         "versionName" : "0.2",
-        "targetSdkVersion": "28",
+        "targetSdkVersion": "29",
     },
     deps = [
         ":bazel_res",
