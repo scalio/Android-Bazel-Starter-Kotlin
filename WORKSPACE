@@ -2,8 +2,8 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 android_sdk_repository(
     name = "androidsdk",
-    api_level = 28,
-    build_tools_version = "28.0.3"
+    api_level = 29,
+    build_tools_version = "29.0.0"
 )
 
 http_archive(
@@ -36,26 +36,24 @@ maven_install(
         "androidx.drawerlayout:drawerlayout:1.0.0",
         "androidx.constraintlayout:constraintlayout:1.1.3",
         "com.google.android.material:material:1.0.0",
-        "org.jetbrains:annotations:17.0.0",
         "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0-M2",
         "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1"
     ],
     repositories = [
-        "https://jcenter.bintray.com/",
         "https://maven.google.com",
-        "https://repo1.maven.org/maven2",
+        "https://jcenter.bintray.com",
     ],
     fetch_sources = True,
 )
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-rules_kotlin_version = "master_scalio"
+rules_kotlin_version = "VERSION_0.1"
 rules_kotlin_compiler_release = {
     "urls": [
-        "https://github.com/JetBrains/kotlin/releases/download/v1.3.30/kotlin-compiler-1.3.30.zip",
+        "https://github.com/JetBrains/kotlin/releases/download/v1.3.41/kotlin-compiler-1.3.41.zip",
     ],
-    "sha256": "3d5c2219357ec0a247ccccba45377a5b544876871ce230da90e739953531bdec",
+    "sha256": "c44ab6866895606e408b60934ebe45d4befcbc33ea0e4ea73c4b3b89ad770132",
 }
 
 http_archive(
@@ -63,9 +61,9 @@ http_archive(
     urls = ["https://github.com/scalio/rules_kotlin/archive/%s.zip" % rules_kotlin_version],
     type = "zip",
     strip_prefix = "rules_kotlin-%s" % rules_kotlin_version,
-    sha256 = "480bbc6504b3cbc9c661165861df186c59c23ac5a07df5654e0eb30ae7df5153"
+    sha256 = "7a463fa65b49fb686ad0e24eca7a4a8f6dc884bb7392ad8dcbfe44e0616091e5"
 )
 
 load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kotlin_repositories", "kt_register_toolchains")
-kotlin_repositories()
+kotlin_repositories(compiler_release = rules_kotlin_compiler_release)
 kt_register_toolchains()
