@@ -15,3 +15,13 @@ Explore our Kotlin build rules and use the same in your projects.
 ## 🔴 Current issues
 
 * Databinidng is not supported
+
+
+## About us
+<p align="center">
+    <br/>
+    <a href="https://scal.io/">
+        <img src="https://raw.githubusercontent.com/scalio/bazel-status/master/assets/scalio-logo.svg?sanitize=true" />
+    </a>
+    <br/>
+</p>
