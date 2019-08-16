@@ -1,4 +1,4 @@
-# Bazel Android/Kotlin Starter
+# Bazel Android-Kotlin Starter
 
 This repository contains simple Kotlin 1.3 application and its Bazel build files. To build these samples, do the following:
 
