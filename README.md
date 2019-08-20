@@ -3,7 +3,7 @@
 <h1 align="center">Bazel Android-Kotlin Starter</h1>
 
 <p align="center">
-  A starter app made using Kotlin on Android -- built <b>using <a href="https://bazel.build/">Bazel</a></b>
+  A starter app written in Kotlin for Android -- built <b>using <a href="https://bazel.build/">Bazel</a></b>
 </p>
 
 &nbsp;
