@@ -48,7 +48,7 @@ maven_install(
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-rules_kotlin_version = "VERSION_0.1"
+rules_kotlin_version = "scalio_kotlin_1.3"
 rules_kotlin_compiler_release = {
     "urls": [
         "https://github.com/JetBrains/kotlin/releases/download/v1.3.41/kotlin-compiler-1.3.41.zip",
@@ -61,7 +61,7 @@ http_archive(
     urls = ["https://github.com/scalio/rules_kotlin/archive/%s.zip" % rules_kotlin_version],
     type = "zip",
     strip_prefix = "rules_kotlin-%s" % rules_kotlin_version,
-    sha256 = "7a463fa65b49fb686ad0e24eca7a4a8f6dc884bb7392ad8dcbfe44e0616091e5"
+    sha256 = "3cc884a32068ed93f6d63e6e0019a563bdb5b5d426d8e1cdae2baa213f6ec459"
 )
 
 load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kotlin_repositories", "kt_register_toolchains")
