@@ -3,7 +3,7 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 android_sdk_repository(
     name = "androidsdk",
     api_level = 29,
-    build_tools_version = "29.0.0"
+    build_tools_version = "29.0.2"
 )
 
 http_archive(
