@@ -36,8 +36,8 @@ maven_install(
         "androidx.drawerlayout:drawerlayout:1.0.0",
         "androidx.constraintlayout:constraintlayout:1.1.3",
         "com.google.android.material:material:1.0.0",
-        "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0-M2",
-        "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1"
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2",
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.2"
     ],
     repositories = [
         "https://maven.google.com",
@@ -48,20 +48,23 @@ maven_install(
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-rules_kotlin_version = "scalio_kotlin_1.3"
+kotlin_version = "1.3.61"
+kotlin_release_sha = "3901151ad5d94798a268d1771c6c0b7e305a608c2889fc98a674802500597b1c"
 rules_kotlin_compiler_release = {
     "urls": [
-        "https://github.com/JetBrains/kotlin/releases/download/v1.3.41/kotlin-compiler-1.3.41.zip",
+    "https://github.com/JetBrains/kotlin/releases/download/v{v}/kotlin-compiler-{v}.zip".format(v = kotlin_version),
     ],
-    "sha256": "c44ab6866895606e408b60934ebe45d4befcbc33ea0e4ea73c4b3b89ad770132",
+    "sha256": kotlin_release_sha,
 }
 
+rules_kotlin_version = "legacy-1.3.0-rc1"
+rules_kotlin_sha = "9de078258235ea48021830b1669bbbb678d7c3bdffd3435f4c0817c921a88e42"
 http_archive(
     name = "io_bazel_rules_kotlin",
-    urls = ["https://github.com/scalio/rules_kotlin/archive/%s.zip" % rules_kotlin_version],
+    urls = ["https://github.com/bazelbuild/rules_kotlin/archive/%s.zip" % rules_kotlin_version],
     type = "zip",
     strip_prefix = "rules_kotlin-%s" % rules_kotlin_version,
-    sha256 = "3cc884a32068ed93f6d63e6e0019a563bdb5b5d426d8e1cdae2baa213f6ec459"
+    sha256 = rules_kotlin_sha
 )
 
 load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kotlin_repositories", "kt_register_toolchains")
