@@ -1,4 +1,4 @@
-![Bazel at Scalio](https://raw.githubusercontent.com/scalio/bazel-status/master/assets/scalio-bak.svg?sanitize=true)
+![Bazel at Scalio](https://raw.githubusercontent.com/scalio/bazel/master/assets/scalio-bak.svg?sanitize=true)
 
 <h1 align="center">Bazel Android-Kotlin Starter</h1>
 
@@ -29,7 +29,7 @@ Explore our Kotlin build rules and use the same in your projects.
 <p align="center">
     <br/>
     <a href="https://scal.io/">
-        <img src="https://raw.githubusercontent.com/scalio/bazel-status/master/assets/scalio-logo.svg?sanitize=true" />
+        <img src="https://raw.githubusercontent.com/scalio/bazel/master/assets/scalio-logo.svg?sanitize=true" />
     </a>
     <br/>
 </p>
